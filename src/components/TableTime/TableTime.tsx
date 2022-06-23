@@ -1,7 +1,7 @@
 import React from 'react';
 import { Cell } from '../../css/Cell'
 
-interface TimetableProps {
+export interface TimetableProps {
   name: string;
   size: number;
   x: number;

@@ -1,13 +1,11 @@
-
 import React from 'react'
 import { Container } from './styles'
-import { Cell } from '../../css/Cell'
 import Header from '../Header'
 import Sidebar from '../Sidebar'
 import TableTime from '../TableTime'
 
-export default function SimpleGrid(props: {title: string}) {
-
+export default function Grid(props: {title: string}) {
+  
   const week = ["Segunda-feira", "Terça-feira", "Quarta-feira" , "Quinta-feira", "Sexta-feira", "Sábado"]
 
   const time = [

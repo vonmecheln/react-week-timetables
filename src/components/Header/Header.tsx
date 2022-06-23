@@ -1,13 +1,13 @@
 import React from 'react'
 import { Cell } from '../../css/Cell'
-let dayOffSet = 2;
 
-interface HeaderProps{
+export interface HeaderProps{
   week: Array<string>;
   title: string;
 }
 
 export default function Header(props: HeaderProps) {
+  let dayOffSet = 2;
   return (
     <>
       <Cell gridArea= {`1 / 2 / 2 / ${props.week.length + 2}`}>

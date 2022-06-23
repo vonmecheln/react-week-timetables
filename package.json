@@ -1,6 +1,9 @@
 {
-  "name": "react-week-timetables",
-  "version": "1.0.0",
+  "name": "@vonmecheln/react-week-timetables",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/react-week-timetables"
+  },
+  "version": "1.0.5",
   "description": "",
   "scripts": {
     "rollup": "rollup -c"
@@ -12,20 +15,29 @@
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.3",
-    "@types/react": "^18.0.12",
-    "react": "^18.1.0",
+    "@types/react": "^18.0.14",
+    "babel-plugin-styled-components": "^2.0.7",
+    "react": "^18.2.0",
     "rollup": "^2.75.6",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.3"
-  },
-  "dependencies": {
-    "@types/styled-components": "^5.1.25"
+    "typescript": "^4.7.4"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
+    "@types/styled-components": "^5.1.25",
+    "babel-loader": "^8.2.5",
+    "styled-components": "^5.3.5"
+  }
 }
