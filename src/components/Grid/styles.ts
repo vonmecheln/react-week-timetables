@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-export const Container = styled.div<{columns: string, rows: string}>`
+export const Container = styled.div`
   display: grid;
-  grid-template-columns: ${props => props.columns};
-  grid-template-rows: ${props => props.rows};
+  grid-template-columns: 10fr;
+  grid-template-rows: 10fr;
   margin: 1rem auto;
   width: 95vw;
   height: 95vh;

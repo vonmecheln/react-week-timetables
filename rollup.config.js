@@ -3,7 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import babel from 'rollup-plugin-babel'
+import babel from '@rollup/plugin-babel'
 
 const packageJson = require("./package.json");
 export default [
@@ -30,6 +30,7 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       babel({
+        babelHelpers: 'runtime',
         plugins: ['babel-plugin-styled-components'],
         exclude: 'node_modules/**'
       })

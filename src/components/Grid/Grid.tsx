@@ -1,103 +1,38 @@
 import React from 'react'
+import Button from '../Button'
 import { Container } from './styles'
-import Header from '../Header'
-import Sidebar from '../Sidebar'
-import TableTime from '../TableTime'
+// import Header from '../Header'
+// import Sidebar from '../Sidebar'
+// import TableTime from '../TableTime'
 
-export default function Grid(props: {title: string}) {
-  
-  const week = ["Segunda-feira", "Terça-feira", "Quarta-feira" , "Quinta-feira", "Sexta-feira", "Sábado"]
+// interface TimetableProps {
+//   name: string;
+//   size: number;
+//   x: number;
+//   y: number;
+// }
 
-  const time = [
-      {
-        name: "07:30 - 08:20",
-        size: 50  
-      }, 
-      {
-        name: "08:20 - 09:10",
-        size: 50  
-      }, 
-      {
-        name: "Intervalo (09:10 - 09:25)",
-        size: 15  
-      }, 
-      {
-        name: "09:25 - 10:15",
-        size: 50  
-      }, 
-      {
-        name: "10:15 - 11:05",
-        size: 50  
-      }, 
-      {
-        name: "11:05 - 11:55",
-        size: 50  
-      }, 
-      {
-        name: "Intervalo (11:55 - 13:10)",
-        size: 75  
-      }, 
-    ]
-    const listTimeTable = [
-    {
-      name: "Matemática",
-      size: 2,
-      day: 'Segunda-feira',
-      timeBegin: "07:30 - 08:20"
-    },
-    {
-      name: "Português",
-      size: 1,
-      day: 'Terça-feira',
-      timeBegin: "08:20 - 09:10"
-    }
-  ]
+// interface TimeProps {
+//   name: string;
+//   size: number;
+// }
+// export default function Grid(props: {title: string, week: Array<string>, time: Array<TimeProps>, listTimetable: Array<TimetableProps>}){
+//   let columns = `10fr repeat(${props.week.length}, ${90/props.week.length}fr)`
+//   let rows = "50px 50px"  
+//   props.time.forEach(el => {
+//     rows += ` ${el.size}fr`
+//   })
 
-  const listTimeTransform = [
-    {
-      name: "Matemática",
-      size: 2,
-      x: 1,
-      y: 1
-    },
-    {
-      name: "Português",
-      size: 1,
-      x: 2,
-      y: 2
-    },
-    {
-      name: "Geografia",
-      size: 1,
-      x: 1,
-      y: 2
-    },
-    {
-      name: "História",
-      size: 2,
-      x: 1,
-      y: 3
-    },
-    {
-      name: "Biologia",
-      size: 2,
-      x: 1,
-      y: 4
-    }
-
-  ]
-  
-  let columns = `10fr repeat(${week.length}, ${90/week.length}fr)`
-  let rows = "50px 50px"
-  time.forEach(el => {
-    rows += ` ${el.size}fr`
-  })
-  
+export default function Grid(){
+  let columns = `10fr`
+  let rows = `10fr`
   return(
-    <Container columns={ columns } rows={rows}>
-      <Header week={week} title={props.title}/>
-      <Sidebar time={time}/>
-      <TableTime listTimeTable={listTimeTransform} rows={time.length} cols={week.length}/>
-    </Container>
+    <Button/>
+    // <Container>
+      
+    //   <Header week={props.week} title={props.title}/>
+    //   <Sidebar time={props.time}/>
+    //   <TableTime listTimetable={props.listTimetable} rows={props.time.length} cols={props.week.length}/>
+    // </Container>
   )
 }
