@@ -1,14 +1,14 @@
 import React from 'react';
 import { Cell } from '../../css/Cell'
 
-export interface TimetableProps {
-  name: string;
+export interface ClassesProps {
+  subject: string;
   size: number;
   x: number;
   y: number;
 }
 
-export default function TableTime(props: {listTimetable: Array<TimetableProps>, rows: number, cols: number}) {
+export default function TableTime(props: {listClasses: Array<ClassesProps>, rows: number, cols: number}) {
   let row = 1
   let col = 0
   const or = 2 //OFFSET ROW
@@ -17,7 +17,7 @@ export default function TableTime(props: {listTimetable: Array<TimetableProps>, 
   return (
     <>
       {
-        props.listTimetable.map((el) => {
+        props.listClasses.map((el) => {
 
           if ( col < props.cols ) 
             col++
@@ -27,7 +27,7 @@ export default function TableTime(props: {listTimetable: Array<TimetableProps>, 
           }
 
           let ga = `${or+el.x} / ${oc+el.y} / ${or + el.size + el.x} / ${oc + 1 + el.y}`
-          return <Cell key={el.name} gridArea={ga}>{`${el.name} (${row}, ${col}) ${ga}`}</Cell>
+          return <Cell key={el.subject} gridArea={ga}>{`${el.subject} (${row}, ${col}) ${ga}`}</Cell>
         })
       }
     </>

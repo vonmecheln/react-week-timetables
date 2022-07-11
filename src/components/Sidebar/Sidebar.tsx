@@ -2,20 +2,20 @@ import React from 'react'
 import { Cell } from '../../css/Cell.js'
 
 export interface TimeClassesProps {
-  name: string;
+  time: string;
   size?: number;
 }
 
-export default function Sidebar(props: {time: Array<TimeClassesProps>}) {
+export default function Sidebar(props: {timeClasses: Array<TimeClassesProps>}) {
   let timeOffSet = 3
   return(
     <>
       <Cell gridArea="1 / 1 / 3 / 2"></Cell>
       {
-        props.time.map(timeEl => 
+        props.timeClasses.map(timeEl => 
           <Cell 
-          gridArea= {`${timeOffSet} / 1 / ${timeOffSet++} / 2`} key={timeEl.name}>
-            <span>{timeEl.name}</span>
+          gridArea= {`${timeOffSet} / 1 / ${timeOffSet++} / 2`} key={timeEl.time}>
+            <span>{timeEl.time}</span>
           </Cell>  
         )
       } 
