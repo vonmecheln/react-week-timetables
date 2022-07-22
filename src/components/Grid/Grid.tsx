@@ -17,17 +17,17 @@ interface TimeProps {
 }
 
   
-export default function Grid(props: {title: string, week: Array<string>, time: Array<TimeProps>, listClasses: Array<ClassesProps>}){
-    let columns = `10fr repeat(${props.week.length}, ${90/props.week.length}fr)`
+export default function Grid(props: {title: string, weekDays: Array<string>, time: Array<TimeProps>, listClasses: Array<ClassesProps>}){
+    let columns = `10fr repeat(${props.weekDays.length}, ${90/props.weekDays.length}fr)`
     let rows = "50px 50px"  
     props.time.forEach(el => {
       rows += ` ${el.size}fr`
     })
     return(
     <Container columns={columns} rows={rows}>
-      <Header weekDays={props.week} title={props.title}/>
+      <Header weekDays={props.weekDays} title={props.title}/>
       <Sidebar timeClasses={props.time}/>
-      <TableTime listClasses={props.listClasses} rows={props.time.length} cols={props.week.length}/>
+      <TableTime listClasses={props.listClasses} rows={props.time.length} cols={props.weekDays.length}/>
     </Container>
   )
 }

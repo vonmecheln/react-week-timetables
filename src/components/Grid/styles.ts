@@ -7,7 +7,7 @@ export const Container = styled.div<{columns: string, rows: string}>`
   margin: 1rem auto;
   width: 95vw;
   height: 95vh;
-  border: 1px solid red;
+  border: 1px solid black;
   gap: 0;
   background-color: #E1E1E1;
 `
